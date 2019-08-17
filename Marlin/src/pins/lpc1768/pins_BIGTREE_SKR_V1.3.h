@@ -197,6 +197,16 @@
     #define LCD_PINS_ENABLE P1_23
     #define LCD_PINS_D4    P1_21
 
+/**
+ *                   _____                                               _____
+ *              GND | B b | 5V                                       5V | b B | GND
+ *  (BEEPER_PIN) A4 | W R | 10 (ESTOP)           (LCD_PINS_ENABLE) 1.23 | Y G | 1.22 (LCD_PINS_RS)
+ *     (BTN_ENC) A3 | g O | 11 (LCD_PINS_D4)         (LCD_PINS_D4) 1.21 | O B | 1.20 (BTN_EN2)
+ *     (BTN_EN1) A2 | P Y | 16 (LCD_PINS_ENABLE)           (ESTOP) 1.19 | R P | 1.18 (BTN_EN1)
+ *     (BTN_EN2) A1 | B G | 17 (LCD_PINS_RS)             (BTN_ENC) 0.28 | g W | 1.30 (BEEPER)
+ *                   -----                                               -----
+ *               LCD for MELZI                                            EXP1
+ */
   #else
     #define LCD_PINS_RS    P1_19
 
